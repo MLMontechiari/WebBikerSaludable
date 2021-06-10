@@ -1,0 +1,854 @@
+/*INICIO CONFIGURACIONES BASICAS*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+    background-color: #fff;
+    font-family: 'Poppins', sans-serif;
+    text-rendering: optimizeLegibility;
+    font-size: 18px;
+    text-align: center;
+    max-width: 100vw;
+}
+
+li {
+    list-style: none;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: black;
+}
+
+h4 {
+    margin: 1em auto;
+    font-size: 1em;
+}
+
+
+h3:after {
+    display: block;
+    margin: 1em auto;
+    height: 2px;
+    background-color: #c01f7d;
+    content: " ";
+    width: 100px;
+}
+
+footer h3 {
+  display: inline-block;
+    margin-top: 2em;
+    color: white;
+}
+
+#contenido-lectura {
+    width: 70%;
+    margin-left: 15%;
+}
+
+section {
+    margin: 2em 0;
+}
+
+blockquote {
+    padding: 2%;
+    line-height: 145%;
+    position: relative;
+    margin-top: 40px;
+    color: white;
+}
+
+blockquote:before {
+    content: "\201C";
+    font-size: 500%;
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}
+
+input[type=submit] {
+    width: 70%;
+    font-weight: 500 !important;
+    font-family: 'Poppins', sans-serif;
+}
+
+footer {
+    margin-top: 2em;
+    background: rgb(100, 2, 84);
+}
+/*FIN DE CONFIGURACIONES BASICAS*/
+
+/*INICIO Base de apilamiento de columnas */
+.columna {
+    float: left;
+}
+/* Clear floats despues de las columnas*/
+  .fila:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+/*FIN Base de apilamiento de columnas*/
+
+.botones-vermasmenos {
+  margin-top: 2em;
+}
+
+#barra {
+  max-width: 100%;
+  height: calc(100vh - 4em);
+  position: absolute;
+}
+
+#barra li {
+  list-style: none;
+  display: inline-block;
+  margin: auto;
+  width: 10em;
+}
+
+#barra li a {
+  text-decoration: none;
+  line-height: 2em;
+  color: rgb(100, 2, 84);
+}
+
+figure {
+  text-align: center;
+}
+
+img {
+	max-width: 100%;
+}
+
+#enviado {
+  display: none;
+}
+
+/*INICIO DE ESTILOS PARA FORMULARIO*/
+#enviado:target {
+  display: inherit;
+  background-color: yellowgreen;
+  color: white;
+  padding: 1em;
+  width: 70%;
+  margin: 1em auto;
+  border-radius: 30px;
+}
+.contact-form {
+    width: 70%;
+    margin: 0 auto;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+    width:70%;
+    padding: 7px;
+    border-radius: 10px 10px 10px 10px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+::placeholder {
+    color: grey;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+textarea {
+    height: 100px;
+}
+/*FIN DE ESTILOS PARA FORMULARIO*/
+
+/*INICIO DE BOTONES PARA REUTILIZAR*/
+.btn-full:link,
+.btn-full:visited,
+input[type=submit] {
+    background-color: rgb(100, 2, 84);
+    border: 1px solid rgb(100, 2, 84);
+    color: #fff;
+    margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid rgb(100, 2, 84);
+    color: rgb(100, 2, 84);
+}
+
+.btn:hover,
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+    background-color: rgb(155, 52, 175);
+}
+
+.btn-full:hover,
+.btn-full:active {
+    border: 1px solid rgb(100, 2, 84);
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid rgb(100, 2, 84);
+    color: #fff;
+}
+/*FIN DE BOTONES PARA REUTILIZAR*/
+
+/*INICIO DE BOTONES DE REDES */
+#redes {
+    margin-left: auto;
+    margin-right: auto;
+    column-count: 4;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+#redes li a{
+    display: inline-block;
+    background: url(../img/sprite.png);
+	width:54px;
+	height:54px;
+	text-indent:-9000px;
+	
+}
+
+#redes li a:hover{
+    background: url(../img/spritehover.png);
+
+}
+#redes li:nth-child(1) a{
+	background-position: 0px -54px;
+	
+}
+#redes li:nth-child(2) a{
+	background-position:-54px -54px;
+}
+#redes li:nth-child(3) a{
+	background-position: -107px -54px;
+	
+}
+#redes li:nth-child(4) a{
+	background-position: -162px -54px;
+	
+}
+
+.contenido-lectura {
+    width: 70%;
+    margin-left: 15%;
+}
+/*FIN DE BOTONES DE REDES */
+
+/*INICIO CLASES Y ID DE LA GALERIA DE IMAGENES*/
+  .slideshow-container {
+    margin-top: 2em;
+    position: relative;
+    max-width: 100%;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 45%;
+    width: auto;
+    margin-top: -22px;
+    padding: 10px 20px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+    border-radius: 200px;
+    background-color: white;
+    opacity: 0.6;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: black;
+    color: white;
+  }
+  
+  .number {
+    color: black;
+    padding: 10px 10px;
+    position: absolute;
+    background-color: white;
+    opacity: 0.4;
+  }
+  
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1;}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity : 1}
+  }
+/*FIN CLASES Y ID DE LA GALERIA DE IMAGENES*/
+/*INICIO DE CLASES Y ID DE LAS PASTILLA DE INFORMACION*/
+.card picture img {
+  border-radius: 15px 15px 0 0;
+}
+.card {
+	background: rgb(247, 243, 243);
+  margin-bottom: 2em;	
+  border-radius: 15px;
+}
+
+.card a {
+	color: black;
+  text-decoration: none;
+}
+
+.card:hover {
+	box-shadow: 3px 3px 8px hsl(0, 0%, 80%);
+}
+
+.card-content {
+	padding: 1.0em;
+}
+
+.card-content h3 {
+	margin-top: 0;
+	margin-bottom: .5em;
+	font-weight: bold;
+}
+
+.card-content p {
+	font-size: 80%;
+}
+/*FIN DE CLASES Y ID DE LAS PASTILLAS DE BASICAS*/
+/*INICIO DE CLASES Y ID DEL BOTON VERMAS BASICAS*/
+.puntos {
+  display: none;
+}
+/*FIN DE CLASES Y ID DEL BOTON VERMAS DESKTOP*/
+
+/*INICIO DE MEDIA QUERY PARA MOBILE*/
+@media screen and (max-width: 600px) {
+  
+  html,
+  body {
+    font-size: 16px;
+    overflow-x: hidden; 
+    position: relative; /*Sin esto en Safari no funcionaba el overflow-x hidden*/
+  }
+
+  header {
+    background: url("../img/banner-mobile.jpg") no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+  }
+  
+  nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+  }
+  #hamburguesa li {
+      list-style: none;
+      text-indent: -100px;
+      margin-top: .75em;
+      width: 2.5em;
+      float: right;
+      overflow-x: hidden;
+      margin-right: 1%;
+  }
+  #hamburguesa li a {
+      background: url("../img/menu-mobile-tablet.png") no-repeat center center;
+      background-size: cover;
+      display: block;
+      height: 2.5em;
+  }
+  #hamburguesa li:last-child {
+      display: none;
+  }
+  nav:target #barra {
+      right: 0;
+      background-color: black;
+  }
+
+  #barra {
+      top: 4em;
+      right: -100%;
+      transition: right .5s ease;
+      background-color: black;
+      opacity: 0.9;
+  }
+
+  #barra li {
+    width: 80%;
+    margin: 1em;
+  }
+  .logo {
+    background: url("../img/logo-mobile-tablet.png") no-repeat center center;
+    float: left;
+    padding: 50px 100px;
+    font-size: 0px;
+  }
+
+  nav:target #hamburguesa li:first-child {
+      display: none;
+  }
+  nav:target #hamburguesa li:last-child {
+      display: block;
+  }
+  #barra li a {
+    color: white;
+  }
+  /* INICIO 3 Columnas de desktop en mobile va al 100% del width*/
+  .columna-de-3 {
+	width: 100%; 
+  }
+  .columna-de-2 {
+    width: 100%; 
+  }
+/* FIN 3 Columnas de desktop en mobile va al 100% del width*/
+  #hero-text {
+    display: inline-block;
+    text-align: left;
+    color: white;
+    max-width: 90%;
+    margin-top: 8em;
+    margin-left: 2em;
+  }
+  #hero-text p {
+  margin: 5% auto;
+  }
+  
+  .btn:link,
+  .btn:visited,
+   input[type=submit] {
+    display: inline-block;
+    padding: 8px 8px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    transition: background-color 0.2s, border 0.2s, color 0.2s; 
+  }
+
+  .btn-ghost:link,
+  .btn-ghost:visited {
+    border: 1px solid white;
+    color: white;
+  }
+  .btn:hover,
+  .btn:active,
+  input[type=submit]:hover,
+  input[type=submit]:active {
+    background-color: white;
+    color: rgb(100, 2, 84);
+  }
+
+  #redes {
+    width: 60%;
+  }
+  /*INICIO Galeria de imagenes configuracion Mobile*/
+  .next {
+    right: 0.5em;
+  }
+  .prev {
+      left: 0.5em;
+  }
+  .number {
+    top: 0;
+    left: 1em;
+  }
+  /*FIN Galeria de imagenes configuracion Mobile*/
+  /*INICIO SECCION VIDEO*/
+  #video {
+    margin-top: 2em;
+    width: 100vw;
+    max-width: 100%;
+    background: black;
+  }
+  
+  iframe {
+    width: 100%;
+    height: 50vh;
+    border: 0;
+  }
+/*FIN SECCION VIDEO*/
+/*INICIO DE CLASES Y ID DEL BOTON VERMAS MOBILE*/
+  .puntos {
+    display: inline-block;
+  }
+  #masTextoCardio {
+    display: none;
+  }
+  #masTextoCardio:target {
+    display: block;
+  }
+  #masTextoCalorias {
+    display: none;
+  }
+  #masTextoCalorias:target {
+    display: block;
+  }
+  #masTextoArticulaciones {
+    display: none;
+  }
+  #masTextoArticulaciones:target {
+    display: block;
+  }
+  #masTextoInmune {
+    display: none;
+  }
+  #masTextoInmune:target {
+    display: block;
+  }
+/*FIN DE CLASES Y ID DEL BOTON VERMAS MOBILE*/
+  .cards {
+    margin-top: 2em;
+  }
+}
+/*FIN DE MEDIA QUERY PARA MOBILE POR EL MOMENTO....*/
+
+/*INICIO DE MEDIA QUERY PARA TABLET*/
+@media screen and (min-width: 601px) and (max-width: 991px) {
+  html,
+  body {
+    overflow-x: hidden; 
+    position: relative; /*Sin esto en Safari no funcionaba el overflow-x hidden*/
+  }  
+  header {
+    background: url("../img/banner-tablet.jpg") no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+  }
+  h2 {
+    font-size: 1.7em;
+  }
+  nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  #hamburguesa li {
+      list-style: none;
+      text-indent: -100px;
+      margin-top: .75em;
+      width: 2.5em;
+      float: right;
+      overflow-x: hidden;
+      margin-right: 1%;
+  }
+  #hamburguesa li a {
+      background: url("../img/menu-mobile-tablet.png") no-repeat center center;
+      background-size: cover;
+      display: block;
+      height: 2.5em;
+  }
+  #hamburguesa li:last-child {
+      display: none;
+  }
+  nav:target #barra {
+      right: 0;
+      background-color: black;
+  }
+  
+  #barra {
+      width: 100%;
+      top: 4em;
+      right: -100%;
+      transition: right .5s ease;
+      background-color: black;
+      opacity: 0.9;
+  }
+  
+  #barra li {
+    width: 80%;
+    margin: 1em;
+  }
+
+  .logo {
+    background: url("../img/logo-mobile-tablet.png") no-repeat center center;
+    float: left;
+    padding: 50px 100px;
+    font-size: 0px;
+  }
+  nav:target #hamburguesa li:first-child {
+      display: none;
+  }
+  nav:target #hamburguesa li:last-child {
+      display: block;
+  }
+  #barra li a {
+    color: white;
+  }
+  /* INICIO 3 Columnas de desktop en tablet va al 50% del width para generar 2 columnas*/
+  .columna-de-3 {
+  width: 50%; 
+  }
+  .columna-de-2 {
+    width: 50%; 
+  }
+  /*FIN 3 Columnas de desktop en tablet va al 50% del width para generar 2 columnas*/
+  #hero-text {
+    width: 80%;
+    float: left;
+    text-align: left;
+    color: white;
+    margin-top: 4em;
+    margin-left: 2em;
+  }
+  #hero-text p {
+  margin: 5% auto;
+  }
+  .btn:link,
+  .btn:visited,
+  input[type=submit] {
+  display: inline-block;
+  padding: 10px 10px;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 200px;
+  transition: background-color 0.2s, border 0.2s, color 0.2s; 
+  }
+  .btn-ghost:link,
+  .btn-ghost:visited {
+    border: 1px solid white;
+    color: white;
+  }
+  .btn:hover,
+  .btn:active,
+  input[type=submit]:hover,
+  input[type=submit]:active {
+    background-color: white;
+    color: rgb(100, 2, 84);
+  }
+  
+  #redes {
+    width: 60%;
+  }
+  /*INICIO Galeria de imagenes configuracion Mobile*/
+  .next {
+    right: 0.5em;
+  }
+  .prev {
+      left: 0.5em;
+  }
+  .number {
+    top: 0;
+    left: 1em;
+  }
+  /*FIN Galeria de imagenes configuracion Mobile*/
+  /*INICIO SECCION VIDEO*/
+  #video {
+    text-align: center;
+    width: 100vw;
+    height: calc(100vw * 500 / 600);
+    max-width: 100%;
+    max-height: 500px;
+    background: black;
+    margin: auto;
+  }
+    
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  /*Las pastillas de informacion en tablet se ven a 2 columnas*/
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 2em;
+  }
+  .card {
+    flex: 0 1 calc(50% - 1em);
+  }
+  /*INICIO DE CLASES Y ID DEL BOTON VERMAS TABLET*/
+  .puntos {
+    display: inline-block;
+  }
+  #masTextoCardio {
+    display: none;
+  }
+  #masTextoCardio:target {
+    display: block;
+  }
+  #masTextoCalorias {
+    display: none;
+  }
+  #masTextoCalorias:target {
+    display: block;
+  }
+  #masTextoArticulaciones {
+    display: none;
+  }
+  #masTextoArticulaciones:target {
+    display: block;
+  }
+  #masTextoInmune {
+    display: none;
+  }
+  #masTextoInmune:target {
+    display: block;
+  }
+/*FIN DE CLASES Y ID DEL BOTON VERMAS TABLET*/
+}
+/*FIN DE MEDIA QUERY PARA TABLET....*/
+
+/*INICIO DE MEDIA QUERY PARA DESKTOP*/
+@media screen and (min-width: 992px) {
+  h2 {
+    font-size: 1.9em;
+  }
+
+  #hamburguesa {
+      display: none;
+  }
+
+  #redes {
+      width: 30%;
+  }
+
+  header {
+      background: url("../img/banner.jpg") no-repeat center center;
+      background-size: cover;
+      height: 100vh;
+  }
+
+  #menu {
+      display: inline-block;
+      width: 100%
+  }
+
+  #barra {
+      margin-top: 1em;
+      margin-left: 30%;
+      position: absolute;
+      height: auto;
+      top: -1%;
+  }
+
+  #barra li {
+      font-weight: 600;
+      margin-top: 1em;
+      width: 6em;
+    }
+  
+    #barra li a:hover {
+      color: rgb(155, 52, 175);
+    }
+
+  .logo {
+    background: url("../img/logo.jpg") no-repeat center center;
+    float: left;
+    padding: 50px 100px;
+    font-size: 0px;
+  }
+
+  #barra li a {
+      text-decoration: violet   ;
+  }
+
+  .btn:link,
+  .btn:visited,
+   input[type=submit] {
+    display: inline-block;
+    padding: 15px 15px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    transition: background-color 0.2s, border 0.2s, color 0.2s; 
+  }
+  #hero-text {
+      font-size: 20px;
+      position: absolute;
+      text-align: left;
+      color: rgb(100, 2, 84);
+      width: 35%;
+      top: 15em;
+      left: 20%;
+      transform: translate(-50%, -50%);
+  }
+
+  #hero-text p {
+    margin: 5% auto;
+  }
+/* INICIO Grilla a 3 Columnas para desktop */
+  .columna-de-3 {
+	width: 32.26%; 
+  }
+  .columna-de-2 {
+    width: 50%; 
+  }
+/* FIN Grilla a 3 Columnas para desktop */
+
+/*INICIO Galeria de imagenes configuracion Desktop*/
+.next {
+    right: 1em;
+  }
+  .prev {
+      left: 1em;
+  }
+
+.number {
+    top: 0;
+}
+/*FIN Galeria de imagenes configuracion Desktop*/
+/*INICIO SECCION VIDEO*/
+#video {
+  margin-top: 2em;
+  width: 100vw;
+  max-width: 100%;
+  background: black;
+}
+
+iframe {
+  width: 100%;
+  height: 75vh;
+  border: 0;
+}
+/*FIN SECCION VIDEO*/
+/*Las pastillas de informacion en desktop se ven a 4 columnas*/
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+.card {
+  flex: 0 1 calc(25% - 1em);
+}
+/*INICIO DE CLASES Y ID DEL BOTON VERMAS DESKTOP*/
+.puntos {
+  display: none;
+}
+.botones-vermasmenos {
+  display: none;
+}
+/*FIN DE CLASES Y ID DEL BOTON VERMAS DESKTOP*/
+}
+/*FIN DE MEDIA QUERY PARA DESKTOP*/
