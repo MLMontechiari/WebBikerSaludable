@@ -20,7 +20,7 @@ Las tecnologias utilizadas en este proyecto:
 - [HTML] - El maquetado del sitio
 - [CSS] - Dando estilo
 - [Javascript] - Sin librerias 
-- [PHP] - Script de feedback a mail del solicitando
+- [PHP] - Script de feedback a mail
 
 ## Installation
 
